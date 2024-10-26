@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int movesubs(char videodir[] = "/path/to/videos", char subdir[] = "/path/to/subs")
+int movesubs(char videodir[], char subdir[])
 {
 	//Grab subtitles list, move it to video series with correct filename for videoplayers
 	printf("Moving Subtitles from %s to %s\n", videodir, subdir);
@@ -8,7 +8,7 @@ int movesubs(char videodir[] = "/path/to/videos", char subdir[] = "/path/to/subs
 	return 0;
 }
 
-int syncsubs(double syncby = 0.100)
+int syncsubs(double syncby)
 {
 	//grab sub file and offset the sync time for all subtitles
 	printf("Syncing Subtitles by %d\n", syncby)
@@ -33,12 +33,12 @@ int main(int argc, char **argv)
 		switch(argv[0]
 		{
 			case "movsubs":
-				movesubs();
+				movesubs('/path/to/videos', '/path/to/subs');
 				return 0;
 				break;
 			
 			case "sync":
-				syncsubs();
+				syncsubs(0.100);
 				return 0;
 				break;
 			
