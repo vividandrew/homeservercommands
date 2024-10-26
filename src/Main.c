@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 int movesubs(char videodir[], char subdir[])
 {
@@ -28,23 +29,21 @@ int help()
 int main(int argc, char **argv)
 {
 	printf("Welcome to homeserver commands\n");
-	for (int i = 0; i < argc; ++i)
+	
+	if(strcmp(argv[1], "movsubs") == 0)
 	{
-		if(argv[0] == "movsubs")
-		{
-			movesubs("/path/to/videos", "/path/to/subs");
-			return 0;
-		}else if(argv[0] == "sync")
-		{
-			syncsubs(0.100);
-			return 0;
-		}else if(argv[0] == "--help")
-		{
-			help();
-			return 0;			
-		}else{
-			printf("You have not input a valid command, please see --help for commands\n");
-		}
+		movesubs("/path/to/videos", "/path/to/subs");
+		return 0;
+	}else if(strcmp(argv[1],  "sync") == 0)
+	{
+		syncsubs(0.100);
+		return 0;
+	}else if(strcmp(argv[1], "--help") == 0)
+	{
+		help();
+		return 0;			
+	}else{
+		printf("You have not input a valid command, please see --help for commands\n");
 	}
 	
 	return -1;
