@@ -30,7 +30,7 @@ int main(int argc, char **argv)
 	printf("Welcome to homeserver commands\n");
 	for (int i = 0; i < argc; ++i)
 	{
-		switch(argv[0]
+		switch(argv[0])
 		{
 			case "movsubs":
 				movesubs('/path/to/videos', '/path/to/subs');
