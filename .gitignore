@@ -1,0 +1,9 @@
+build.sh
+CMakeCache.txt
+CMakeFiles
+cmake_install.cmake
+CMakeLists.txt
+.codelite
+homeservercommands.project
+homeservercommands.workspace
+Makefile
