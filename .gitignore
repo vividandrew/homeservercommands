@@ -7,3 +7,4 @@ CMakeLists.txt
 homeservercommands.project
 homeservercommands.workspace
 Makefile
+dockerfile
