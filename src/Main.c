@@ -30,26 +30,20 @@ int main(int argc, char **argv)
 	printf("Welcome to homeserver commands\n");
 	for (int i = 0; i < argc; ++i)
 	{
-		switch(argv[0])
+		if(argv[0] == "movsubs")
 		{
-			case "movsubs":
-				movesubs('/path/to/videos', '/path/to/subs');
-				return 0;
-				break;
-			
-			case "sync":
-				syncsubs(0.100);
-				return 0;
-				break;
-			
-			case "--help":
-				help();
-				return 0;
-				break;
-				
-			default:
-				printf("You have not input a valid command, please see --help for commands\n");
-				break;
+			movesubs("/path/to/videos", "/path/to/subs");
+			return 0;
+		}else if(argv[0] == "sync")
+		{
+			syncsubs(0.100);
+			return 0;
+		}else if(argv[0] == "--help")
+		{
+			help();
+			return 0;			
+		}else{
+			printf("You have not input a valid command, please see --help for commands\n");
 		}
 	}
 	
