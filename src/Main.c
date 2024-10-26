@@ -11,7 +11,7 @@ int movesubs(char videodir[], char subdir[])
 int syncsubs(double syncby)
 {
 	//grab sub file and offset the sync time for all subtitles
-	printf("Syncing Subtitles by %d\n", syncby)
+	printf("Syncing Subtitles by %f\n", syncby);
 	
 	return 0;
 }
@@ -28,7 +28,7 @@ int help()
 int main(int argc, char **argv)
 {
 	printf("Welcome to homeserver commands\n");
-	for int i = 0; i < argc; ++i)
+	for (int i = 0; i < argc; ++i)
 	{
 		switch(argv[0]
 		{
