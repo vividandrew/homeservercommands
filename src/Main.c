@@ -36,9 +36,7 @@ int movesubs(char videodir[], char subdir[])
 		}
 		//end of reading videos
 		closedir(videos);
-	}
-	//Checks that videos dir is available
-	if(videos == NULL)
+	}else
 	{
 		return -1;
 	}
@@ -56,8 +54,7 @@ int movesubs(char videodir[], char subdir[])
 		printf("Grabbing Subtitles .srt files\n");
 		subtitles = opendir(subdir);
 		closedir(subtitles);
-	}
-	if(subtitles == NULL)
+	}else
 	{
 		return -1;
 	}
